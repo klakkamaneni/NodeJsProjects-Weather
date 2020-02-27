@@ -11,7 +11,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find given location.Please try new serach', undefined)
         } else {
             callback(undefined, 
-                `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out.There is a ${body.currently.precipProbability}% chnace of rain`)           
+                `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out.There is a ${body.currently.precipProbability}% chnace of rain. 
+                Temparture high: ${body.daily.data[0].temperatureHigh}  Temparture Low is ${body.daily.data[0].temperatureLow} `)           
         }
     })
 }
